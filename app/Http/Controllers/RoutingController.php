@@ -26,11 +26,11 @@ class RoutingController extends BaseController
      */
     public function index(Request $request)
     {
-        if (Auth::user()) {
+        // if (Auth::user()) {
             return redirect('/dashboards/index');
-        } else {
+        // } else {
             return redirect('login');
-        }
+        // }
     }
 
     /**
