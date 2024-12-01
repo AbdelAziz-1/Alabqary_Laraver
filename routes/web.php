@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\Grade\GradeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
+use App\Http\Controllers\Grade\GradeController;
+use App\Http\Controllers\Courses\CourseController;
+use App\Http\Controllers\subject\SubjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,9 @@ use App\Http\Controllers\RoutingController;
 */
 
 Route::resource('grade', GradeController::class);
+Route::resource('subject', SubjectController::class);
+Route::resource('courses', CourseController::class);
+
 // require __DIR__ . '/auth.php';
 
     Route::get('/', [RoutingController::class, 'index'])->name('root');

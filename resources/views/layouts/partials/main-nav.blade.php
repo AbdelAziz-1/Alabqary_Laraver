@@ -31,14 +31,14 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link menu-arrow" href="#sidebarCategory" data-bs-toggle="collapse" role="button"
-                    aria-expanded="false" aria-controls="sidebarCategory">
+                <a class="nav-link menu-arrow" href="#grade" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="grade">
                     <span class="nav-icon">
                         <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
                     </span>
                     <span class="nav-text"> Grade </span>
                 </a>
-                <div class="collapse" id="sidebarCategory">
+                <div class="collapse" id="grade">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
                             <a class="sub-nav-link" href="{{ route('grade.index') }}">List</a>
@@ -46,6 +46,54 @@
                         <!-- <li class="sub-nav-item">
                             <a class="sub-nav-link" href="{{ route('grade.create') }}">Create</a>
                         </li> -->
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link menu-arrow" href="#Subjects" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="Subjects">
+                    <span class="nav-icon">
+                        <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                    </span>
+                    <span class="nav-text"> Subjects </span>
+                </a>
+                <div class="collapse" id="Subjects">
+                    <ul class="nav sub-navbar-nav">
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('subject.index') }}">List</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link menu-arrow" href="#Courses" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="Courses">
+                    <span class="nav-icon">
+                        <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                    </span>
+                    <span class="nav-text"> Courses </span>
+                </a>
+                <div class="collapse" id="Courses">
+                    <ul class="nav sub-navbar-nav">
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('courses.index') }}">List</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link menu-arrow" href="#Blogs" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="Blogs">
+                    <span class="nav-icon">
+                        <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                    </span>
+                    <span class="nav-text"> Blogs </span>
+                </a>
+                <div class="collapse" id="Blogs">
+                    <ul class="nav sub-navbar-nav">
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('grade.index') }}">List</a>
+                        </li>
                     </ul>
                 </div>
             </li>
