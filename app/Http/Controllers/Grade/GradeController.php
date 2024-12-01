@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Grade;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\grade\GradeRequest;
+use App\Models\Grade;
 use Illuminate\Http\Request;
 
 class GradeController extends Controller
@@ -12,7 +14,8 @@ class GradeController extends Controller
      */
     public function index()
     {
-        return view('general.grade.index');
+        $grades = Grade::query()->get();
+        return view('general.grade.create', compact('grades'));
     }
 
     /**
@@ -20,46 +23,44 @@ class GradeController extends Controller
      */
     public function create()
     {
-        //
+        $grades = Grade::query()->get();
+        return view('general.grade.create', compact('grades'));
     }
-
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(GradeRequest $request)
     {
-        //
+        Grade::create($request->validated());
+        return redirect()->route('grade.index')->with('success', 'Grade created successfully!');
     }
-
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+
+    public function show(Grade $grade)
     {
-        //
+        return view('general.grade.show', compact('grade'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $grade = Grade::findOrFail($id);
+        $grades = Grade::all();
+        return view('general.grade.create', compact('grade','grades'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(GradeRequest $request, Grade $grade)
     {
-        //
+        $grade->update($request->validated());
+        return redirect()->route('grade.index')->with('success', 'Grade updated successfully!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $grade = Grade::findOrFail($id);
+        $grade->delete();
+
+        return redirect()->back()->with('success', 'Grade deleted successfully!');
     }
 }
