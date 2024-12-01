@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ContactUsController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,10 @@ use App\Http\Controllers\RoutingController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::resource('contact-us', ContactUsController::class);
+
 Route::resource('gallery', GalleryController::class);
 
 Route::resource('grade', GradeController::class);
