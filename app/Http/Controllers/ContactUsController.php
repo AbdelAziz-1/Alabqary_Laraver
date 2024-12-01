@@ -9,8 +9,8 @@ class ContactUsController extends Controller
     // عرض جميع الرسائل
     public function index()
     {
-        $messages = ContactUs::latest()->get(); // جلب كل الرسائل بترتيب زمني تنازلي
-        return view('general.contactUs.contact-us', compact('messages'));
+        $contacts = ContactUs::all(); // جلب كل الرسائل بترتيب زمني تنازلي
+        return view('general.contactUs.contact-us', compact('contacts'));
     }
 
     // عرض صفحة إنشاء رسالة جديدة
@@ -40,8 +40,8 @@ class ContactUsController extends Controller
     // عرض صفحة تعديل رسالة
     public function edit($id)
     {
-        $message = ContactUs::findOrFail($id); // جلب الرسالة بناءً على الـ ID
-        return view('general.contactUs.contact-us', compact('message'));
+        $contact = ContactUs::findOrFail($id); // جلب الرسالة بناءً على الـ ID
+        return view('general.contactUs.contact-us', compact('contact'));
     }
 
     // تحديث رسالة
@@ -65,8 +65,8 @@ class ContactUsController extends Controller
     // حذف رسالة
     public function destroy($id)
     {
-        $message = ContactUs::findOrFail($id);
-        $message->delete();
+        $contact = ContactUs::findOrFail($id);
+        $contact->delete();
 
         return redirect()->route('contact-us.index')->with('success', 'Message deleted successfully!');
     }

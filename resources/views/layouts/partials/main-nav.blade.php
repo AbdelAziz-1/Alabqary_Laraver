@@ -49,6 +49,7 @@
                     </ul>
                 </div>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#Subjects" data-bs-toggle="collapse" role="button"
                     aria-expanded="false" aria-controls="Subjects">
@@ -97,7 +98,25 @@
                     </ul>
                 </div>
             </li>
-
+<li class="nav-item">
+                <a class="nav-link menu-arrow" href="#gallery" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="gallery">
+                    <span class="nav-icon">
+                        <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                    </span>
+                    <span class="nav-text"> Gallery </span>
+                </a>
+                <div class="collapse" id="gallery">
+                    <ul class="nav sub-navbar-nav">
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('gallery.index') }}">List</a>
+                        </li>
+                        <!-- <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('gallery.create') }}">Create</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </li>
             <!-- <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#sidebarProducts" data-bs-toggle="collapse" role="button"
                    aria-expanded="false" aria-controls="sidebarProducts">

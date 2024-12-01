@@ -58,6 +58,13 @@
                                     value="{{ old('email', $contact->email ?? '') }}" required>
                             </div>
                         </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label for="address" class="form-label">العنوان </label>
+                                <input type="text" id="address" name="address" class="form-control" 
+                                    value="{{ old('address', $contact->address ?? '') }}" required>
+                            </div>
+                        </div>
 
                         <!-- Phone -->
                         <div class="col-lg-6">
@@ -99,6 +106,10 @@
                             <th>ID</th>
                             <th>الاسم</th>
                             <th>البريد الإلكتروني</th>
+                            <th>العنوان</th>
+                            <th>التلفون</th>
+                            <th>الرساله</th>
+                           
                             <th>الإجراءات</th>
                         </tr>
                     </thead>
@@ -108,6 +119,9 @@
                             <td>{{ $contact->id }}</td>
                             <td>{{ $contact->first_name }} {{ $contact->last_name }}</td>
                             <td>{{ $contact->email }}</td>
+                            <td>{{ $contact->address }}</td>
+                            <td>{{ $contact->phone }}</td>
+                            <td>{{ $contact->message }}</td>
                             <td>
                                 <a href="{{ route('contact-us.edit', $contact->id) }}" class="btn btn-primary btn-sm">تعديل</a>
                                 <form action="{{ route('contact-us.destroy', $contact->id) }}" method="POST" style="display:inline-block;">
