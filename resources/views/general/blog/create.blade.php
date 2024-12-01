@@ -67,7 +67,7 @@
                 <!-- Submit Button -->
                 <div class="col-lg-2 mb-3">
                     <button type="submit" class="btn float-left btn-outline-secondary w-100 ">
-                        {{ isset($grade) ? 'تعديل الصف الدراسي' : 'انشاء صف جديد' }}
+                        {{ isset($grade) ? 'Update Grade' : 'انشاء صف جديد' }}
                     </button>
                 </div>
             </div>

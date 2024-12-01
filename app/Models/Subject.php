@@ -4,18 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class courses extends Model
+class Subject extends Model
 {
     protected $fillable = [
         'title',
-        'image',
         'note',
+        'grade_id',
     ];
 
-
-    public function videos()
+    public function grade()
     {
-        return $this->hasMany(courses_video::class, 'course_id', 'id');
+        return $this->belongsTo(Grade::class);
     }
-    
 }

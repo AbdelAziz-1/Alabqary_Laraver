@@ -1,10 +1,7 @@
 <?php
 
-use App\Http\Controllers\Grade\GradeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
-use App\Http\Controllers\GalleryController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +16,9 @@ use App\Http\Controllers\GalleryController;
 Route::resource('gallery', GalleryController::class);
 
 Route::resource('grade', GradeController::class);
+Route::resource('subject', SubjectController::class);
+Route::resource('courses', CourseController::class);
+
 // require __DIR__ . '/auth.php';
 
     Route::get('/', [RoutingController::class, 'index'])->name('root');
