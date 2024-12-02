@@ -4,9 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\Courses\CourseController;
+use App\Http\Controllers\Grade\GradeController;
 use App\Http\Controllers\SettingController;
-
-
+use App\Http\Controllers\subject\SubjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,6 @@ use App\Http\Controllers\SettingController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 
 Route::resource('contact-us', ContactUsController::class);
 Route::resource('settings', SettingController::class);
