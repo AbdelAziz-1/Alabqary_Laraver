@@ -32,20 +32,20 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">{{ isset($grade) ? 'تعديل الصف' : 'ٌانشاء صف جديد' }}</h4>
+                    <h4 class="card-title">{{ isset($grade) ? 'تعديل المقالة' : 'ٌانشاء مقالة جديدة' }}</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <!-- Grade Title Input -->
                         <div class="col-lg-6">
                             <div class="mb-3">
-                                <label for="title" class="form-label">اسم الصف</label>
+                                <label for="title" class="form-label">عنوان المقالة</label>
                                 <input
                                     type="text"
                                     id="title"
                                     name="title"
                                     class="form-control"
-                                    placeholder="ادخل اسم الصف"
+                                    placeholder="ادخل اسم المقالة"
                                     value="{{ old('title', $grade->title ?? '') }}"
                                     required>
                             </div>
@@ -54,7 +54,7 @@
                         <!-- Note Input -->
                         <div class="col-lg-12 mb-3">
                             <div class="mb-3">
-                                <label for="note" class="form-label">ملاحظات</label>
+                                <label for="note" class="form-label">وصف المقالة</label>
                                 <textarea
                                     name="note"
                                     class="form-control"
@@ -67,7 +67,7 @@
                 <!-- Submit Button -->
                 <div class="col-lg-2 mb-3">
                     <button type="submit" class="btn float-left btn-outline-secondary w-100 ">
-                        {{ isset($grade) ? 'Update Grade' : 'انشاء صف جديد' }}
+                        {{ isset($grade) ? 'Update Grade' : 'انشاء مقالة جديدة' }}
                     </button>
                 </div>
             </div>

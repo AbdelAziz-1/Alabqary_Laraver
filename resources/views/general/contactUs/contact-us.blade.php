@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="row">
+<div class="row"  dir="rtl">
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -83,12 +83,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Submit Button -->
-                <div class="col-lg-2 mb-3">
-                    <button type="submit" class="btn btn-outline-secondary w-100">
-                        {{ isset($contact) ? 'Update Message' : 'إضافة رسالة' }}
-                    </button>
+                    <!-- Submit Button -->
+                    <div class="col-lg-2 mb-3">
+                        <button type="submit" class="btn btn-outline-secondary w-100">
+                            {{ isset($contact) ? 'Update Message' : 'إضافة رسالة' }}
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>

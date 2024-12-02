@@ -77,3 +77,8 @@
 @import "pages/authentication";
 @import "pages/pricing";
 @import "pages/timeline";
+
+* ,h1 ,h2 ,h3 ,h4,h5,h6 ,p ,label, li, ::placeholder{
+    // direction: rtl !important;
+    font-family: 'Cairo', sans-serif !important;
+}

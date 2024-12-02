@@ -5,85 +5,40 @@
             <img src="/images/logo-sm.png" class="logo-sm" alt="logo sm">
             <img src="/images/logo-dark.png" class="logo-lg" alt="logo dark">
         </a>
-
         <a href="{{ route('second', [ 'dashboards' , 'index']) }}" class="logo-light">
             <img src="/images/logo-sm.png" class="logo-sm" alt="logo sm">
             <img src="/images/logo-light.png" class="logo-lg" alt="logo light">
         </a>
     </div>
-
     <!-- Menu Toggle Button (sm-hover) -->
     <button type="button" class="button-sm-hover" aria-label="Show Full Sidebar">
         <iconify-icon icon="solar:double-alt-arrow-right-bold-duotone" class="button-sm-hover-icon"></iconify-icon>
     </button>
-
     <div class="scrollbar" data-simplebar>
         <ul class="navbar-nav" id="navbar-nav">
-
-            <li class="menu-title">General</li>
-
+            <li class="menu-title">القائمة</li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('second', [ 'dashboards' , 'index']) }}">
                     <span class="nav-icon">
                         <iconify-icon icon="solar:widget-5-bold-duotone"></iconify-icon>
                     </span>
-                    <span class="nav-text"> Dashboard </span>
+                    <span class="nav-text"> لوحة التحكم  </span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link menu-arrow" href="#contact-us" data-bs-toggle="collapse" role="button"
-                    aria-expanded="false" aria-controls="contact-us">
-                    <span class="nav-icon">
-                        <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
-                    </span>
-                    <span class="nav-text">contact-us</span>
-                </a>
-                <div class="collapse" id="subject">
-                    <ul class="nav sub-navbar-nav">
-                        <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('contact-us.index') }}">List</a>
-                        </li>
-                        <!-- <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('subject.create') }}">Create</a>
-                        </li> -->
-                    </ul>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link menu-arrow" href="#settings" data-bs-toggle="collapse" role="button"
-                    aria-expanded="false" aria-controls="settings">
-                    <span class="nav-icon">
-                        <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
-                    </span>
-                    <span class="nav-text"> settings </span>
-                </a>
-                <div class="collapse" id="settings">
-                    <ul class="nav sub-navbar-nav">
-                        <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('settings.index') }}">List</a>
-                        </li>
-                        <!-- <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('grade.create') }}">Create</a>
-                        </li> -->
-                    </ul>
-                </div>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#grade" data-bs-toggle="collapse" role="button"
                     aria-expanded="false" aria-controls="grade">
                     <span class="nav-icon">
                         <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
                     </span>
-                    <span class="nav-text"> Grade </span>
+                    <span class="nav-text"> المراحل التعليمية </span>
                 </a>
                 <div class="collapse" id="grade">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('grade.index') }}">List</a>
+                            <a class="sub-nav-link" href="{{ route('grade.index') }}">جميع المراحل التعليمية</a>
                         </li>
-                        <!-- <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('grade.create') }}">Create</a>
-                        </li> -->
                     </ul>
                 </div>
             </li>
@@ -94,12 +49,12 @@
                     <span class="nav-icon">
                         <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
                     </span>
-                    <span class="nav-text"> Subjects </span>
+                    <span class="nav-text"> المواد الدراسية </span>
                 </a>
                 <div class="collapse" id="Subjects">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('subject.index') }}">List</a>
+                            <a class="sub-nav-link" href="{{ route('subject.index') }}">جميع المواد الدراسية</a>
                         </li>
                     </ul>
                 </div>
@@ -110,12 +65,12 @@
                     <span class="nav-icon">
                         <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
                     </span>
-                    <span class="nav-text"> Courses </span>
+                    <span class="nav-text"> الدورات التعليمية </span>
                 </a>
                 <div class="collapse" id="Courses">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('courses.index') }}">List</a>
+                            <a class="sub-nav-link" href="{{ route('courses.index') }}">جميع الدورات</a>
                         </li>
                     </ul>
                 </div>
@@ -126,32 +81,61 @@
                     <span class="nav-icon">
                         <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
                     </span>
-                    <span class="nav-text"> Blogs </span>
+                    <span class="nav-text"> الاخبار </span>
                 </a>
                 <div class="collapse" id="Blogs">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('grade.index') }}">List</a>
+                            <a class="sub-nav-link" href="{{ route('grade.index') }}">جميع الاخبار</a>
                         </li>
                     </ul>
                 </div>
             </li>
-<li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#gallery" data-bs-toggle="collapse" role="button"
                     aria-expanded="false" aria-controls="gallery">
                     <span class="nav-icon">
                         <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
                     </span>
-                    <span class="nav-text"> Gallery </span>
+                    <span class="nav-text"> معرض الصور </span>
                 </a>
                 <div class="collapse" id="gallery">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('gallery.index') }}">List</a>
+                            <a class="sub-nav-link" href="{{ route('gallery.index') }}">جميع الصور والفيديوهات</a>
                         </li>
-                        <!-- <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('gallery.create') }}">Create</a>
-                        </li> -->
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link menu-arrow" href="#contact-us" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="contact-us">
+                    <span class="nav-icon">
+                        <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                    </span>
+                    <span class="nav-text">الرسائل</span>
+                </a>
+                <div class="collapse" id="contact-us">
+                    <ul class="nav sub-navbar-nav">
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('contact-us.index') }}">جميع الرسائل</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link menu-arrow" href="#settings" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="settings">
+                    <span class="nav-icon">
+                        <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                    </span>
+                    <span class="nav-text"> الاعدادات </span>
+                </a>
+                <div class="collapse" id="settings">
+                    <ul class="nav sub-navbar-nav">
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('settings.index') }}">الاعدادات</a>
+                        </li>
                     </ul>
                 </div>
             </li>

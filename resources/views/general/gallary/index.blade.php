@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['title' => isset($gallery) ? 'Edit Image' : 'Add New Image'])
+@extends('layouts.vertical', ['title' => isset($gallery) ? 'تعديل الصور' : 'اضف صورة جديدة'])
 
 @section('css')
 @vite(['node_modules/choices.js/public/assets/styles/choices.min.css'])
@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="row">
+<div class="row"  dir="rtl">
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -64,12 +64,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Submit Button -->
-                <div class="col-lg-2 mb-3">
-                    <button type="submit" class="btn btn-outline-secondary w-100">
-                        {{ isset($gallery) ? 'Update Image' : 'إضافة صورة جديدة' }}
-                    </button>
+                    <!-- Submit Button -->
+                    <div class="col-lg-2 mb-3">
+                        <button type="submit" class="btn btn-outline-secondary w-100">
+                            {{ isset($gallery) ? 'تحديث الصورة' : 'إضافة صورة جديدة' }}
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>

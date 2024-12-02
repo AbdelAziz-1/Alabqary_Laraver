@@ -1,8 +1,8 @@
-@extends('layouts.vertical', ['title' => isset($setting) ? 'Edit Setting' : 'Settings'])
+@extends('layouts.vertical', ['title' => isset($setting) ? 'تعديل الاعدادات' : 'الاعدادات'])
 
 @section('content')
 
-<div class="row">
+<div class="row" dir="rtl">
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -29,14 +29,14 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">{{ isset($setting) ? 'Edit Setting' : 'Add New Setting' }}</h4>
+                    <h4 class="card-title">{{ isset($setting) ? 'تعديل الاعدادات' : 'اضف اعدادات جديدة' }}</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <!-- Phone -->
                         <div class="col-lg-6">
                             <div class="mb-3">
-                                <label for="phone" class="form-label">Phone</label>
+                                <label for="phone" class="form-label">رقم الهاتف</label>
                                 <input type="text" id="phone" name="phone" class="form-control" 
                                     value="{{ old('phone', $setting->phone ?? '') }}" required>
                             </div>
@@ -45,7 +45,7 @@
                         <!-- Email -->
                         <div class="col-lg-6">
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
+                                <label for="email" class="form-label">البريد الالكتروني</label>
                                 <input type="email" id="email" name="email" class="form-control" 
                                     value="{{ old('email', $setting->email ?? '') }}" required>
                             </div>
@@ -62,12 +62,12 @@
                             </div>
                         @endforeach
                     </div>
-                </div>
-                <!-- Submit Button -->
-                <div class="col-lg-2 mb-3">
-                    <button type="submit" class="btn btn-outline-secondary w-100">
-                        {{ isset($setting) ? 'Update Setting' : 'Add Setting' }}
-                    </button>
+                    <!-- Submit Button -->
+                    <div class="col-lg-2 mb-3">
+                        <button type="submit" class="btn btn-outline-secondary w-100">
+                            {{ isset($setting) ? 'تحديث الاعدادات' : 'اضافة الاعدادات' }}
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>

@@ -7,6 +7,7 @@
      position: sticky;
      overflow: hidden;
      text-align: center;
+     direction: rtl !important;
      white-space: nowrap;
      transition: all 0.3s ease-in-out;
      line-height: $topbar-height;

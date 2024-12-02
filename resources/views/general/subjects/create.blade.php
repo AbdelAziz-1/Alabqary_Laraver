@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="row">
+<div class="row" dir="rtl">
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -66,12 +66,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Submit Button -->
-                <div class="col-lg-2 mb-3">
-                    <button type="submit" class="btn float-left btn-outline-secondary w-100 ">
-                        {{ isset($Subject) ? 'تعديل المادة الدراسية' : 'انشاء مادة جديد' }}
-                    </button>
+                    <!-- Submit Button -->
+                    <div class="col-lg-2 mb-3">
+                        <button type="submit" class="btn float-left btn-outline-secondary w-100 ">
+                            {{ isset($Subject) ? 'تعديل المادة الدراسية' : 'انشاء مادة جديد' }}
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>
