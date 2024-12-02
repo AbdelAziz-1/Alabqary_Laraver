@@ -5,7 +5,9 @@ use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\SettingController;
-
+use App\Http\Controllers\Grade\GradeController;
+use App\Http\Controllers\Courses\CourseController;
+use App\Http\Controllers\subject\SubjectController;
 
 
 /*

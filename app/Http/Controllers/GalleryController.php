@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use App\Helpers\HandleUpload;
 
 class GalleryController extends Controller
 {
@@ -37,7 +38,7 @@ class GalleryController extends Controller
     ]);
 
     // رفع الملف
-    $filePath = $request->file('file')->store('uploads', 'public');
+    $filePath  =HandleUpload::uploadFile($request->file, 'gallery') ;
 
     // إنشاء السجل
     Gallery::create([
@@ -78,7 +79,7 @@ class GalleryController extends Controller
     
         // تحديث البيانات
         if ($request->hasFile('file')) {
-            $filePath = $request->file('file')->store('uploads', 'public');
+            $filePath  =HandleUpload::uploadFile($request->file, 'gallery') ;
             $gallery->update([
                 'title' => $request->title,
                 'file' => $filePath,

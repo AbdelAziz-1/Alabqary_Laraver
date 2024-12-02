@@ -31,6 +31,44 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link menu-arrow" href="#contact-us" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="contact-us">
+                    <span class="nav-icon">
+                        <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                    </span>
+                    <span class="nav-text">contact-us</span>
+                </a>
+                <div class="collapse" id="subject">
+                    <ul class="nav sub-navbar-nav">
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('contact-us.index') }}">List</a>
+                        </li>
+                        <!-- <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('subject.create') }}">Create</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link menu-arrow" href="#settings" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="settings">
+                    <span class="nav-icon">
+                        <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+                    </span>
+                    <span class="nav-text"> settings </span>
+                </a>
+                <div class="collapse" id="settings">
+                    <ul class="nav sub-navbar-nav">
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('settings.index') }}">List</a>
+                        </li>
+                        <!-- <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('grade.create') }}">Create</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#grade" data-bs-toggle="collapse" role="button"
                     aria-expanded="false" aria-controls="grade">
                     <span class="nav-icon">
