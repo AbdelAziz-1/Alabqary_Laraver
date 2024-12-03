@@ -3,8 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
-class blog extends Model
+class Blog extends Model
 {
-    //
+    protected $fillable = [
+        'title',
+        'content',
+        'image',
+    ];
+
 }

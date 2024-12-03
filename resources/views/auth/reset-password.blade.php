@@ -1,54 +1,39 @@
-@extends('layouts.auth', ['title' => 'Reset Password'])
+<x-guest-layout>
+    <form method="POST" action="{{ route('password.store') }}">
+        @csrf
 
-@section('content')
-    <div class="d-flex flex-column h-100 p-3">
-        <div class="d-flex flex-column flex-grow-1">
-            <div class="row h-100">
-                <div class="col-xxl-7">
-                    <div class="row justify-content-center h-100">
-                        <div class="col-lg-6 py-lg-5">
-                            <div class="d-flex flex-column h-100 justify-content-center">
-                                <div class="auth-logo mb-4">
-                                    <a href="{{ route('second', [ 'dashboards' , 'index']) }}" class="logo-dark">
-                                        <img src="/images/logo-dark.png" height="24" alt="logo dark">
-                                    </a>
+        <!-- Password Reset Token -->
+        <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
-                                    <a href="{{ route('second', [ 'dashboards' , 'index']) }}" class="logo-light">
-                                        <img src="/images/logo-light.png" height="24" alt="logo light">
-                                    </a>
-                                </div>
-
-                                <h2 class="fw-bold fs-24">Reset Password</h2>
-
-                                <p class="text-muted mt-1 mb-4">Enter your email address and we'll send you an email with instructions to reset your password.</p>
-
-                                <div>
-                                    <form class="authentication-form">
-                                        <div class="mb-3">
-                                            <label class="form-label" for="example-email">Email</label>
-                                            <input type="email" id="example-email" name="example-email" class="form-control" placeholder="Enter your email">
-                                        </div>
-                                        <div class="mb-1 text-center d-grid">
-                                            <button class="btn btn-primary" type="submit">Reset Password</button>
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <p class="mt-5 text-danger text-center">Back to<a href="{{ route('second', [ 'auth' , 'login']) }}" class="text-dark fw-bold ms-1">Login</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-5 d-none d-xxl-flex">
-                    <div class="card h-100 mb-0 overflow-hidden">
-                        <div class="d-flex flex-column h-100">
-                            <img src="/images/small/img-10.jpg" alt="" class="w-100 h-100">
-                        </div>
-                    </div> <!-- end card -->
-                </div>
-            </div>
+        <!-- Email Address -->
+        <div>
+            <x-input-label for="email" :value="__('Email')" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
-    </div>
 
-@endsection
+        <!-- Password -->
+        <div class="mt-4">
+            <x-input-label for="password" :value="__('Password')" />
+            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mt-4">
+            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+
+            <x-text-input id="password_confirmation" class="block mt-1 w-full"
+                                type="password"
+                                name="password_confirmation" required autocomplete="new-password" />
+
+            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
+        <div class="flex items-center justify-end mt-4">
+            <x-primary-button>
+                {{ __('Reset Password') }}
+            </x-primary-button>
+        </div>
+    </form>
+</x-guest-layout>

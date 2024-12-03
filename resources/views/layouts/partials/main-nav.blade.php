@@ -22,7 +22,7 @@
                     <span class="nav-icon">
                         <iconify-icon icon="solar:widget-5-bold-duotone"></iconify-icon>
                     </span>
-                    <span class="nav-text"> لوحة التحكم  </span>
+                    <span class="nav-text"> لوحة التحكم </span>
                 </a>
             </li>
 
@@ -86,7 +86,7 @@
                 <div class="collapse" id="Blogs">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('grade.index') }}">جميع الاخبار</a>
+                            <a class="sub-nav-link" href="{{ route('blog.index') }}">جميع الاخبار</a>
                         </li>
                     </ul>
                 </div>

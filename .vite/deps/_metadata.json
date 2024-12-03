@@ -1,0 +1,103 @@
+{
+  "hash": "a5ae69fa",
+  "configHash": "f204bbd6",
+  "lockfileHash": "5b5302ef",
+  "browserHash": "4e930a60",
+  "optimized": {
+    "apexcharts": {
+      "src": "../../node_modules/apexcharts/dist/apexcharts.common.js",
+      "file": "apexcharts.js",
+      "fileHash": "ec64283a",
+      "needsInterop": true
+    },
+    "jsvectormap": {
+      "src": "../../node_modules/jsvectormap/dist/jsvectormap.esm.js",
+      "file": "jsvectormap.js",
+      "fileHash": "eb96092f",
+      "needsInterop": false
+    },
+    "jsvectormap/dist/maps/world.js": {
+      "src": "../../node_modules/jsvectormap/dist/maps/world.js",
+      "file": "jsvectormap_dist_maps_world__js.js",
+      "fileHash": "bb83f3a0",
+      "needsInterop": true
+    },
+    "jquery": {
+      "src": "../../node_modules/jquery/dist/jquery.js",
+      "file": "jquery.js",
+      "fileHash": "116a420b",
+      "needsInterop": true
+    },
+    "bootstrap/dist/js/bootstrap.min": {
+      "src": "../../node_modules/bootstrap/dist/js/bootstrap.min.js",
+      "file": "bootstrap_dist_js_bootstrap__min.js",
+      "fileHash": "a9b6d056",
+      "needsInterop": true
+    },
+    "prismjs": {
+      "src": "../../node_modules/prismjs/prism.js",
+      "file": "prismjs.js",
+      "fileHash": "a3af59bb",
+      "needsInterop": true
+    },
+    "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js": {
+      "src": "../../node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js",
+      "file": "prismjs_plugins_normalize-whitespace_prism-normalize-whitespace__js.js",
+      "fileHash": "4572bf7b",
+      "needsInterop": true
+    },
+    "swiper": {
+      "src": "../../node_modules/swiper/swiper.esm.js",
+      "file": "swiper.js",
+      "fileHash": "813c3486",
+      "needsInterop": false
+    },
+    "inputmask": {
+      "src": "../../node_modules/inputmask/dist/inputmask.js",
+      "file": "inputmask.js",
+      "fileHash": "ba27c0e5",
+      "needsInterop": true
+    },
+    "clipboard": {
+      "src": "../../node_modules/clipboard/dist/clipboard.js",
+      "file": "clipboard.js",
+      "fileHash": "58bc456e",
+      "needsInterop": true
+    },
+    "gumshoejs/dist/gumshoe": {
+      "src": "../../node_modules/gumshoejs/dist/gumshoe.js",
+      "file": "gumshoejs_dist_gumshoe.js",
+      "fileHash": "c3c07598",
+      "needsInterop": true
+    },
+    "toastify-js": {
+      "src": "../../node_modules/toastify-js/src/toastify.js",
+      "file": "toastify-js.js",
+      "fileHash": "2d4150a1",
+      "needsInterop": true
+    },
+    "choices.js": {
+      "src": "../../node_modules/choices.js/public/assets/scripts/choices.js",
+      "file": "choices__js.js",
+      "fileHash": "1df91617",
+      "needsInterop": true
+    },
+    "iconify-icon": {
+      "src": "../../node_modules/iconify-icon/dist/iconify-icon.mjs",
+      "file": "iconify-icon.js",
+      "fileHash": "b4b530ae",
+      "needsInterop": false
+    },
+    "simplebar": {
+      "src": "../../node_modules/simplebar/dist/simplebar.esm.js",
+      "file": "simplebar.js",
+      "fileHash": "ffc3c6b7",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-EWTE5DHJ": {
+      "file": "chunk-EWTE5DHJ.js"
+    }
+  }
+}

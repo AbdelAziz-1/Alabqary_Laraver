@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['title' => isset($grade) ? 'Edit Grade' : 'ٌانشاء صف جديد'])
+@extends('layouts.vertical', ['title' => isset($blog) ? 'تعديل الخبر' : 'انشاء خبر جديد'])
 
 @section('css')
 @vite(['node_modules/choices.js/public/assets/styles/choices.min.css'])
@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="row">
+<div class="row" dir="rtl">
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -22,31 +22,29 @@
     </div>
     @endif
 
-    <div class="col-xl-12 col-lg-12 ">
-        <form 
-            action="{{ isset($grade) ? route('grade.update', $grade->id) : route('grade.store') }}" 
-            method="POST">
+    <div class="col-xl-12 col-lg-12">
+        <form action="{{ isset($Blog) ? route('blog.update', $Blog->id) : route('blog.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            @if(isset($grade))
-                @method('PUT') <!-- Use PUT method for updates -->
+            @if(isset($Blog))
+            @method('PUT')
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">{{ isset($grade) ? 'تعديل المقالة' : 'ٌانشاء مقالة جديدة' }}</h4>
+                    <h4 class="card-title">{{ isset($Blog) ? 'تعديل الخبر' : 'انشاء خبر جديدة' }}</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <!-- Grade Title Input -->
+                        <!-- blog Title Input -->
                         <div class="col-lg-6">
                             <div class="mb-3">
-                                <label for="title" class="form-label">عنوان المقالة</label>
+                                <label for="title" class="form-label">عنوان الخبر</label>
                                 <input
                                     type="text"
                                     id="title"
                                     name="title"
                                     class="form-control"
-                                    placeholder="ادخل اسم المقالة"
-                                    value="{{ old('title', $grade->title ?? '') }}"
+                                    placeholder="ادخل اسم الخبر"
+                                    value="{{ old('title', $Blog->title ?? '') }}"
                                     required>
                             </div>
                         </div>
@@ -54,51 +52,74 @@
                         <!-- Note Input -->
                         <div class="col-lg-12 mb-3">
                             <div class="mb-3">
-                                <label for="note" class="form-label">وصف المقالة</label>
+                                <label for="content" class="form-label">وصف الخبر</label>
                                 <textarea
-                                    name="note"
+                                    name="content"
                                     class="form-control"
-                                    id="note"
-                                    placeholder="اضف ملاحظات...">{{ old('note', $grade->note ?? '') }}</textarea>
+                                    id="content"
+                                    placeholder="اضف ملاحظات...">{{ old('content', $Blog->content ?? '') }}</textarea>
                             </div>
                         </div>
+
+                        <!-- Image Input -->
+                        <div class="col-lg-12 mb-3">
+                            <div class="mb-3">
+                                <label for="image" class="form-label">اضف صورة الخبر</label>
+                                <input type="file" name="image" class="form-control" id="image">
+                            </div>
+                        </div>
+
+                        @if(isset($Blog) && $Blog->image)
+                        <div class="mb-3">
+                            <label for="current-image" class="form-label">الصورة الحالية</label>
+                            <img src="{{ asset('storage/' . $Blog->image) }}" alt="Current Image" class="img-fluid">
+                        </div>
+                        @endif
                     </div>
-                </div>
-                <!-- Submit Button -->
-                <div class="col-lg-2 mb-3">
-                    <button type="submit" class="btn float-left btn-outline-secondary w-100 ">
-                        {{ isset($grade) ? 'Update Grade' : 'انشاء مقالة جديدة' }}
-                    </button>
+                    <!-- Submit Button -->
+                    <div class="col-lg-2 mb-3">
+                        <button type="submit" class="btn float-left btn-outline-secondary w-100">
+                            {{ isset($Blog) ? 'تحديث الخبر' : 'انشاء خبر جديدة' }}
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>
-        
+
         <div class="card mt-3">
             <div class="card-header">
-                <h4 class="card-title">قائمة الصفوف</h4>
+                <h4 class="card-title">قائمة الاخبار</h4>
             </div>
             <div class="card-body">
                 <div class="row">
-                    @isset($grades)
-                    @if($grades->isNotEmpty())
+                    @isset($Blogs)
+                    @if($Blogs->isNotEmpty())
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>صورة الخبر</th>
                                 <th>العنوان</th>
                                 <th>الملاحظات</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($grades as $grade)
+                            @foreach($Blogs as $blog)
                             <tr>
-                                <td>{{ $grade->id }}</td>
-                                <td>{{ $grade->title }}</td>
-                                <td>{{ $grade->note }}</td>
+                                <td>{{ $blog->id }}</td>
                                 <td>
-                                    <a href="{{ route('grade.edit', $grade->id) }}" class="btn btn-primary btn-sm">تعديل</a>
-                                    <form action="{{ route('grade.destroy', $grade->id) }}" method="POST" style="display:inline-block;">
+                                    @if ($blog->image)
+                                    <img src="{{ asset('storage/' . $blog->image) }}" alt="Blog Image" width="100"  class="img-fluid">
+                                    @else
+                                    <p>No image available.</p>
+                                    @endif
+                                </td>
+                                <td>{{ $blog->title }}</td>
+                                <td>{{ $blog->content }}</td>
+                                <td>
+                                    <a href="{{ route('blog.edit', $blog->id) }}" class="btn btn-primary btn-sm">تعديل</a>
+                                    <form action="{{ route('blog.destroy', $blog->id) }}" method="POST" style="display:inline-block;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">حذف</button>
@@ -109,7 +130,7 @@
                         </tbody>
                     </table>
                     @else
-                    <div class="alert alert-warning">No grades available.</div>
+                    <div class="alert alert-warning">لا توجد اخبار متاحة حاليا.</div>
                     @endif
                     @endisset
                 </div>
@@ -121,5 +142,5 @@
 @endsection
 
 @section('script-bottom')
-@vite(['resources/js/pages/ecommerce-Grade-details.js'])
+@vite(['resources/js/pages/ecommerce-blog-details.js'])
 @endsection

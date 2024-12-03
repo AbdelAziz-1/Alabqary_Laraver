@@ -11,25 +11,8 @@
                 </div>
                 <div class="mt-5 d-flex flex-wrap align-items-center justify-content-between">
                     <div>
-                        <h4 class="mb-1">Gaston Lapierre <i class='bx bxs-badge-check text-success align-middle'></i></h4>
-                        <p class="mb-0">Project Head Manager</p>
-                    </div>
-                    <div class="d-flex align-items-center gap-2 my-2 my-lg-0">
-                        <a href="#!" class="btn btn-info"><i class='bx bx-message-dots'></i> Message</a>
-                        <a href="#!" class="btn btn-outline-primary"><i class="bx bx-plus"></i> Follow</a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
-                                <iconify-icon icon="solar:menu-dots-bold" class="fs-20 align-middle text-muted"></iconify-icon>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">Download</a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">Export</a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">Import</a>
-                            </div>
-                        </div>
+                        <h4 class="mb-1">Hello, {{ Auth::user()->name }}! <i class='bx bxs-badge-check text-success align-middle'></i></h4>
+                        <!-- <p class="mb-0">Project Head Manager</p> -->
                     </div>
                 </div>
                 <div class="row mt-3 gy-2">
@@ -127,15 +110,12 @@
                         </div>
                         <p class="mb-0 fs-14">Status <span class="badge bg-success-subtle text-success ms-1">Active</span></p>
                     </div>
-                    <div class="mt-2">
-                        <a href="#!" class="text-primary">View More</a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="row">
+<!-- <div class="row">
     <div class="col-xl-8 col-lg-7">
         <div class="card">
             <div class="card-header">
@@ -288,123 +268,8 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<div class="row">
-    <div class="col-lg-3">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Popular Filters</h4>
-            </div>
-            <div class="card-body">
-                <div class="d-flex flex-wrap gap-2" role="group" aria-label="Basic checkbox toggle button group">
-                    <input type="checkbox" class="btn-check" id="all-topic" checked>
-                    <label class="btn bg-body rounded-pill d-flex justify-content-center align-items-center" for="all-topic">All Topics (23)</label>
 
-                    <input type="checkbox" class="btn-check" id="saas">
-                    <label class="btn bg-body rounded-pill d-flex justify-content-center align-items-center" for="saas">#SaaS (21)</label>
-
-                    <input type="checkbox" class="btn-check" id="latam">
-                    <label class="btn bg-body rounded-pill d-flex justify-content-center align-items-center" for="latam">#LatAm (5)</label>
-
-                    <input type="checkbox" class="btn-check" id="inbound">
-                    <label class="btn bg-body rounded-pill d-flex justify-content-center align-items-center" for="inbound">#inbound (4)</label>
-
-                    <input type="checkbox" class="btn-check" id="europe">
-                    <label class="btn bg-body rounded-pill d-flex justify-content-center align-items-center" for="europe">#Europe (25)</label>
-
-                    <input type="checkbox" class="btn-check" id="performance">
-                    <label class="btn bg-body rounded-pill d-flex justify-content-center align-items-center" for="performance">#Performance-marketing (7)</label>
-
-                    <input type="checkbox" class="btn-check" id="facebook">
-                    <label class="btn bg-body rounded-pill d-flex justify-content-center align-items-center" for="facebook">#Facebook-advertising (8)</label>
-                </div>
-            </div>
-            <div class="card-footer border-top text-center">
-                <a href="#!" class="link-primary">View More</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-9">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex align-items-center gap-2">
-                    <img src="/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle border border-light border-3">
-                    <div>
-                        <h4 class="mb-1">Gaston Lapierre , <span class="fs-13 text-muted fw-medium ms-1">Project Head Manager . Nov 16</span></h4>
-                        <p class="mb-0">Asked a question <a href="#!" class="text-primary ms-1">#inbound</a> <a href="#!" class="text-primary ms-1">#SaaS</a></p>
-                    </div>
-                </div>
-                <h4 class="mt-3">Do you have any experience with deploying @Hubspot for a SaaS business with both a direct and self-serve model?</h4>
-                <p class="mb-0">We are a Series A B2B startup offering a custom solution. Currently, we are utilizing @MixPanel and collaborating with @Division of Labor to rebuild our pages. Shoutout to @Jennifer Smith for her support...<a href="#!" class="link-primary"> See more</a></p>
-            </div>
-            <div class="card-footer border-top">
-                <div class="row">
-                    <div class="col-lg-2 col-4">
-                        <a href="#!" class="text-primary d-inline-flex gap-1 align-items-center fs-14"><iconify-icon icon="solar:pen-new-square-broken" class="fs-16"></iconify-icon> Answer</a>
-                    </div>
-                    <div class="col-lg-2 col-4">
-                        <a href="#!" class="text-dark d-inline-flex gap-1 align-items-center fs-14"><iconify-icon icon="solar:hand-shake-broken" class="fs-16"></iconify-icon> Thanks</a>
-                    </div>
-                    <div class="col-lg-2 col-4">
-                        <a href="#!" class="text-dark d-inline-flex gap-1 align-items-center fs-14"><iconify-icon icon="solar:lightbulb-minimalistic-broken" class="fs-16"></iconify-icon> Insightful</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex align-items-center gap-2">
-                    <img src="/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle border border-light border-3">
-                    <div>
-                        <h4 class="mb-1">Gaston Lapierre , <span class="fs-13 text-muted fw-medium ms-1">Project Head Manager . Nov 11</span></h4>
-                        <p class="mb-0">Asked a question <a href="#!" class="text-primary ms-1">#LatAm</a> <a href="#!" class="text-primary ms-1">#Europe</a></p>
-                    </div>
-                </div>
-                <h4 class="mt-3">Looking for a new landing page optimization vendor</h4>
-                <p class="mb-0">We are currently using @Optimizely, but find that they are missing a number with a custom solution that no... <a href="#!" class="link-primary"> See more</a></p>
-            </div>
-            <div class="card-footer border-top">
-                <div class="row">
-                    <div class="col-lg-2 col-4">
-                        <a href="#!" class="text-primary d-inline-flex gap-1 align-items-center fs-14"><iconify-icon icon="solar:pen-new-square-broken" class="fs-16"></iconify-icon> Answer</a>
-                    </div>
-                    <div class="col-lg-2 col-4">
-                        <a href="#!" class="text-dark d-inline-flex gap-1 align-items-center fs-14"><iconify-icon icon="solar:hand-shake-broken" class="fs-16"></iconify-icon> Thanks</a>
-                    </div>
-                    <div class="col-lg-2 col-4">
-                        <a href="#!" class="text-dark d-inline-flex gap-1 align-items-center fs-14"><iconify-icon icon="solar:lightbulb-minimalistic-broken" class="fs-16"></iconify-icon> Insightful</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex align-items-center gap-2">
-                    <img src="/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle border border-light border-3">
-                    <div>
-                        <h4 class="mb-1">Gaston Lapierre , <span class="fs-13 text-muted fw-medium ms-1">Project Head Manager . Nov 08</span></h4>
-                        <p class="mb-0">Asked a question <a href="#!" class="text-primary ms-1">#Performance-marketing</a> <a href="#!" class="text-primary ms-1">#CRM</a></p>
-                    </div>
-                </div>
-                <h4 class="mt-3">Why Your Company Needs a CRM to Grow Better?</h4>
-                <p class="mb-0">CRMs are powerful tools that help you expedite business growth while number with a custom eliminating friction, improving cross-team collaboration, managing your contact records, syncing...<a href="#!" class="link-primary"> See more</a></p>
-            </div>
-            <div class="card-footer border-top">
-                <div class="row">
-                    <div class="col-lg-2 col-4">
-                        <a href="#!" class="text-primary d-inline-flex gap-1 align-items-center fs-14"><iconify-icon icon="solar:pen-new-square-broken" class="fs-16"></iconify-icon> Answer</a>
-                    </div>
-                    <div class="col-lg-2 col-4">
-                        <a href="#!" class="text-dark d-inline-flex gap-1 align-items-center fs-14"><iconify-icon icon="solar:hand-shake-broken" class="fs-16"></iconify-icon> Thanks</a>
-                    </div>
-                    <div class="col-lg-2 col-4">
-                        <a href="#!" class="text-dark d-inline-flex gap-1 align-items-center fs-14"><iconify-icon icon="solar:lightbulb-minimalistic-broken" class="fs-16"></iconify-icon> Insightful</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 @endsection

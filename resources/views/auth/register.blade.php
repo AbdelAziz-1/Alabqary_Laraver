@@ -1,7 +1,7 @@
-@extends('layouts.auth', ['title' => 'Register'])
+@extends('layouts.auth', ['title' => 'تسجيل مستخدم جديد'])
 
 @section('content')
-    <div class="d-flex flex-column h-100 p-3">
+    <div class="d-flex flex-column h-100 p-3" dir="rtl">
         <div class="d-flex flex-column flex-grow-1">
             <div class="row h-100">
                 <div class="col-xxl-7">
@@ -18,53 +18,45 @@
                                     </a>
                                 </div>
 
-                                <h2 class="fw-bold fs-24">Sign Up</h2>
+                                <h2 class="fw-bold fs-24">انشاء حساب</h2>
 
-                                <p class="text-muted mt-1 mb-4">New to our platform? Sign up now! It only takes a
-                                    minute</p>
+                                <!-- <p class="text-muted mt-1 mb-4">New to our platform? Sign up now! It only takes a
+                                    minute</p> -->
 
                                 <div>
                                     <form class="authentication-form">
-                                        <div class="mb-3">
-                                            <label class="form-label" for="example-name">Name</label>
+                                        <div class="my-3">
+                                            <label class="form-label" for="example-name">اسم المستخدم</label>
                                             <input type="text" id="example-name" name="example-name"
                                                    class="form-control" placeholder="Enter your name">
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label" for="example-email">Email</label>
+                                            <label class="form-label" for="example-email">البريد الالكتروني</label>
                                             <input type="email" id="example-email" name="example-email"
                                                    class="form-control bg-" placeholder="Enter your email">
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label" for="example-password">Password</label>
+                                            <label class="form-label" for="example-password">كلمة السر</label>
                                             <input type="text" id="example-password" class="form-control"
                                                    placeholder="Enter your password">
                                         </div>
-                                        <div class="mb-3">
+                                        <!-- <div class="mb-3">
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input" id="checkbox-signin">
-                                                <label class="form-check-label" for="checkbox-signin">I accept Terms and
-                                                    Condition</label>
+                                                <label class="form-check-label" for="checkbox-signin">لقد قرات </label>
                                             </div>
-                                        </div>
+                                        </div> -->
 
-                                        <div class="mb-1 text-center d-grid">
-                                            <button class="btn btn-soft-primary" type="submit">Sign Up</button>
+                                        <div class="mt-4 text-center d-grid">
+                                            <button class="btn btn-soft-primary" type="submit">تسجيل الحساب</button>
                                         </div>
                                     </form>
 
-                                    <p class="mt-3 fw-semibold no-span">OR sign with</p>
-
-                                    <div class="d-grid gap-2">
-                                        <a href="javascript:void(0);" class="btn btn-soft-dark"><i
-                                                class="bx bxl-google fs-20 me-1"></i> Sign Up with Google</a>
-                                        <a href="javascript:void(0);" class="btn btn-soft-primary"><i
-                                                class="bx bxl-facebook fs-20 me-1"></i> Sign Up with Facebook</a>
-                                    </div>
+                                
                                 </div>
 
-                                <p class="mt-auto text-danger text-center">I already have an account <a
-                                        href="{{ route('second', [ 'auth' , 'login']) }}" class="text-dark fw-bold ms-1">Login</a></p>
+                                <p class="mt-auto text-danger text-center">انا امتلك حساب بالفعل !! <a
+                                        href="{{ route('second', [ 'auth' , 'login']) }}" class="text-dark fw-bold ms-1">تسجيل دخول</a></p>
                             </div>
                         </div>
                     </div>

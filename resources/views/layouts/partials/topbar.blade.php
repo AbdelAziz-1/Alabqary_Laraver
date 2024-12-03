@@ -22,199 +22,64 @@
                     <button type="button" class="topbar-button" id="light-dark-mode">
                         <iconify-icon icon="solar:moon-bold-duotone" class="fs-24 align-middle"></iconify-icon>
                     </button>
-                </div>
-
-                <!-- Notification -->
-                <div class="dropdown topbar-item">
-                    <button type="button" class="topbar-button position-relative"
-                            id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                        <iconify-icon icon="solar:bell-bing-bold-duotone" class="fs-24 align-middle"></iconify-icon>
-                        <span
-                            class="position-absolute topbar-badge fs-10 translate-middle badge bg-danger rounded-pill">3<span
-                                class="visually-hidden">unread messages</span></span>
-                    </button>
-                    <div class="dropdown-menu py-0 dropdown-lg dropdown-menu-end"
-                         aria-labelledby="page-header-notifications-dropdown">
-                        <div class="p-3 border-top-0 border-start-0 border-end-0 border-dashed border">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <h6 class="m-0 fs-16 fw-semibold"> Notifications</h6>
-                                </div>
-                                <div class="col-auto">
-                                    <a href="javascript: void(0);" class="text-dark text-decoration-underline">
-                                        <small>Clear All</small>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-simplebar style="max-height: 280px;">
-                            <!-- Item -->
-                            <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom text-wrap">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0">
-                                        <img src="/images/users/avatar-1.jpg"
-                                             class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-1"/>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <p class="mb-0"><span class="fw-medium">Josephine Thompson </span>commented on
-                                            admin panel <span>" Wow 😍! this admin looks good and awesome design"</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Item -->
-                            <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0">
-                                        <div class="avatar-sm me-2">
-                                                       <span
-                                                           class="avatar-title bg-soft-info text-info fs-20 rounded-circle">
-                                                            D
-                                                       </span>
-                                        </div>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <p class="mb-0 fw-semibold">Donoghue Susan</p>
-                                        <p class="mb-0 text-wrap">
-                                            Hi, How are you? What about our next meeting
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Item -->
-                            <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0">
-                                        <img src="/images/users/avatar-3.jpg"
-                                             class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-3"/>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <p class="mb-0 fw-semibold">Jacob Gines</p>
-                                        <p class="mb-0 text-wrap">Answered to your comment on the cash flow forecast's
-                                            graph 🔔.</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Item -->
-                            <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0">
-                                        <div class="avatar-sm me-2">
-                                                       <span
-                                                           class="avatar-title bg-soft-warning text-warning fs-20 rounded-circle">
-                                                            <iconify-icon
-                                                                icon="iconamoon:comment-dots-duotone"></iconify-icon>
-                                                       </span>
-                                        </div>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <p class="mb-0 fw-semibold text-wrap">You have received <b>20</b> new messages
-                                            in the
-                                            conversation</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Item -->
-                            <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0">
-                                        <img src="/images/users/avatar-5.jpg"
-                                             class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-5"/>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <p class="mb-0 fw-semibold">Shawn Bunch</p>
-                                        <p class="mb-0 text-wrap">
-                                            Commented on Admin
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="text-center py-3">
-                            <a href="javascript:void(0);" class="btn btn-primary btn-sm">View All Notification <i
-                                    class="bx bx-right-arrow-alt ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
+                </div>                
 
                 <!-- Theme Setting -->
                 <div class="topbar-item d-none d-md-flex">
                     <button type="button" class="topbar-button" id="theme-settings-btn" data-bs-toggle="offcanvas"
-                            data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas">
+                        data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas">
                         <iconify-icon icon="solar:settings-bold-duotone" class="fs-24 align-middle"></iconify-icon>
                     </button>
                 </div>
-
-                <!-- Activity -->
-                <div class="topbar-item d-none d-md-flex">
-                    <button type="button" class="topbar-button" id="theme-settings-btn" data-bs-toggle="offcanvas"
-                            data-bs-target="#theme-activity-offcanvas" aria-controls="theme-settings-offcanvas">
-                        <iconify-icon icon="solar:clock-circle-bold-duotone" class="fs-24 align-middle"></iconify-icon>
-                    </button>
-                </div>
-
+                
                 <!-- User -->
                 <div class="dropdown topbar-item">
                     <a type="button" class="topbar-button" id="page-header-user-dropdown" data-bs-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                              <span class="d-flex align-items-center">
-                                   <img class="rounded-circle" width="32" src="/images/users/avatar-1.jpg"
-                                        alt="avatar-3">
-                              </span>
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="d-flex align-items-center">
+                            <img class="rounded-circle" width="32" src="/images/users/avatar-1.jpg"
+                                alt="avatar-3">
+                        </span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-end">
+                    <div class="dropdown-menu dropdown-menu">
                         <!-- item-->
-                        <h6 class="dropdown-header">Welcome Gaston!</h6>
+                        <h6 class="dropdown-header">مرحباً, {{ Auth::user()->name }} !</h6>
                         <a class="dropdown-item" href="{{ route('second', ['users', 'pages-profile'])}}">
                             <i class="bx bx-user-circle text-muted fs-18 align-middle me-1"></i><span
-                                class="align-middle">Profile</span>
+                                class="align-middle">الملف الشخصي </span>
                         </a>
-                    <a class="dropdown-item" href="{{ route('second', ['users', 'chat'])}}">
-                            <i class="bx bx-message-dots text-muted fs-18 align-middle me-1"></i><span
-                                class="align-middle">Messages</span>
-                        </a>
-
-                        <a class="dropdown-item" href="{{ route('second', ['users', 'pricing'])}}">
-                            <i class="bx bx-wallet text-muted fs-18 align-middle me-1"></i><span class="align-middle">Pricing</span>
-                        </a>
-                        <a class="dropdown-item" href="{{ route('second', ['users', 'faqs'])}}">
-                            <i class="bx bx-help-circle text-muted fs-18 align-middle me-1"></i><span
-                                class="align-middle">Help</span>
-                        </a>
-                        <a class="dropdown-item" href="{{ route('second', [ 'auth' , 'lock-screen']) }}">
-                            <i class="bx bx-lock text-muted fs-18 align-middle me-1"></i><span class="align-middle">Lock screen</span>
-                        </a>
-
                         <div class="dropdown-divider my-1"></div>
-
-                        <a class="dropdown-item text-danger" href="{{ route('second', [ 'auth' , 'login']) }}">
-                            <i class="bx bx-log-out fs-18 align-middle me-1"></i><span
-                                class="align-middle">Logout</span>
+                        <a class="dropdown-item text-danger" href="#"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            تسجيل الخروج
                         </a>
+                        <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
+                            @csrf
+                        </form>
+
                     </div>
                 </div>
 
-                <!-- App Search-->
-                <form class="app-search d-none d-md-block ms-2">
+                <!-- App Search -->
+                <!-- <form class="app-search d-none d-md-block ms-2">
                     <div class="position-relative">
                         <input type="search" class="form-control" placeholder="Search..." autocomplete="off" value="">
                         <iconify-icon icon="solar:magnifer-linear" class="search-widget-icon"></iconify-icon>
                     </div>
-                </form>
+                </form> --> 
             </div>
         </div>
     </div>
 </header>
 
 <!-- Activity Timeline -->
-<div>
+<!-- <div>
     <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="theme-activity-offcanvas"
-         style="max-width: 450px; width: 100%;">
+        style="max-width: 450px; width: 100%;">
         <div class="d-flex align-items-center bg-primary p-3 offcanvas-header">
             <h5 class="text-white m-0 fw-semibold">Activity Stream</h5>
             <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body p-0">
@@ -268,7 +133,7 @@
                                     <a href="#!" class="fw-medium text-dark">UI/UX Figma Design</a>
                                     <div class="ms-auto">
                                         <a href="#!" class="fw-medium text-primary fs-18" data-bs-toggle="tooltip"
-                                           data-bs-title="Download" data-bs-placement="bottom">
+                                            data-bs-title="Download" data-bs-placement="bottom">
                                             <iconify-icon icon="iconamoon:cloud-download-duotone"></iconify-icon>
                                         </a>
                                     </div>
@@ -335,7 +200,7 @@
                                 </h5>
                                 <p class="d-flex align-items-center gap-1">
                                     <iconify-icon icon="iconamoon:check-circle-1-duotone"
-                                                  class="text-success"></iconify-icon>
+                                        class="text-success"></iconify-icon>
                                     Added a new member to Front Dashboard
                                 </p>
                                 <h6 class="mt-3 text-muted">Monday 10:00 AM</h6>
@@ -352,7 +217,7 @@
                                 </h5>
                                 <p class="d-flex align-items-center gap-1 mt-1">Earned a
                                     <iconify-icon icon="iconamoon:certificate-badge-duotone"
-                                                  class="text-danger fs-20"></iconify-icon>
+                                        class="text-danger fs-20"></iconify-icon>
                                     " Best Product Award"
                                 </p>
                                 <h6 class="mt-3 text-muted">Monday 9:30 AM</h6>
@@ -364,4 +229,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

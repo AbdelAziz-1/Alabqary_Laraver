@@ -1,27 +1,31 @@
 @extends('layouts.vertical', ['title' => 'عرض الدورة'])
 
+@section('css')
+@vite(['node_modules/choices.js/public/assets/styles/choices.min.css'])
+@endsection
+
 @section('content')
-<div class="row">
-    <div class="col-lg-12">
+<div class="row" dir="rtl">
+    <div class="col-xl-12 col-lg-12">
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">{{ $course->title }}</h4>
             </div>
             <div class="card-body">
-                <!-- عرض صورة الدورة -->
+                <!-- Display course image -->
                 @if($course->image)
-                    <div class="mb-3">
+                    <div class="mb-3 col-4">
                         <img src="{{ asset('storage/' . $course->image) }}" alt="Course Image" class="img-thumbnail" width="300">
                     </div>
                 @endif
 
-                <!-- عرض ملاحظات الدورة -->
-                <div class="mb-3">
+                <!-- Display course notes -->
+                <div class="mb-3 col-6">
                     <h5>ملاحظات:</h5>
                     <p>{{ $course->note }}</p>
                 </div>
 
-                <!-- عرض الفيديوهات المرتبطة -->
+                <!-- Display related videos -->
                 <div class="mb-3">
                     <h5>الفيديوهات:</h5>
                     @if($course->videos->isNotEmpty())

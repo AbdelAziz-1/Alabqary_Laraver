@@ -14,9 +14,9 @@ class RoutingController extends BaseController
 
     public function __construct()
     {
-        // $this->
-        // middleware('auth')->
-        // except('index');
+        $this->
+        middleware('auth')->
+        except('index');
     }
 
     /**
@@ -26,11 +26,11 @@ class RoutingController extends BaseController
      */
     public function index(Request $request)
     {
-        // if (Auth::user()) {
+        if (Auth::user()) {
             return redirect('/dashboards/index');
-        // } else {
+        } else {
             return redirect('login');
-        // }
+        }
     }
 
     /**
